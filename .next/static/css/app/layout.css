@@ -911,6 +911,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(23 37 84 / var(--tw-bg-opacity));
 }
+.bg-current {
+  background-color: currentColor;
+}
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -924,6 +927,18 @@ video {
 }
 .bg-cover {
   background-size: cover;
+}
+.bg-contain {
+  background-size: contain;
+}
+.bg-auto {
+  background-size: auto;
+}
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 .p-24 {
   padding: 6rem;
