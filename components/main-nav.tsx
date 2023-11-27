@@ -140,7 +140,7 @@ export function MainNav() {
      </div>
 
       <div>
-          <Button className=""> Donate</Button>
+          <Button className="p-5"> Donate</Button>
       </div>
   </div>
   </>
