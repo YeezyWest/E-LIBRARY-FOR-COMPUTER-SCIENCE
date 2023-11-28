@@ -66,7 +66,7 @@ export default function AboutUs() {
       <div>
        <h1 className='font-bold border-spacing-1'>OUR SUPPORTERS</h1>
       </div>
-     <div className='border-2 border-gray-700'></div>
+     <div className='border-[1px] border-gray-700'></div>
 
      <div className='flex item-center justify-between gap-10 my-5'>
      <Image src="/img/Logo.png" alt="logo" width={150} height={150} />
