@@ -5,7 +5,7 @@ import React from 'react'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from './ui/form'
+import { Form, FormControl, FormField, FormItem } from './ui/form'
 import { Button } from './ui/button'
 
 // 2. Define a submit handler.
@@ -17,7 +17,7 @@ function onSubmit(values: z.infer<typeof formSchema>) {
 
 
 const formSchema = z.object({
-  username: z.string().min(2, {
+  email: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
 })
@@ -27,7 +27,7 @@ export default function Footer() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+        email: "",
     },
   })
 
@@ -75,7 +75,7 @@ export default function Footer() {
                     <form onSubmit={form.handleSubmit(onSubmit)} className="flex items-center justify-center mt-5">
                         <FormField
                         control={form.control}
-                        name="username"
+                        name="email"
                         render={({ field }) => (
                             <FormItem>
                             <FormControl>
@@ -84,7 +84,7 @@ export default function Footer() {
                             </FormItem>
                         )}
                         />
-                        <Button className='p-5 bg-white text-black' type="submit">Submit</Button>
+                        <Button className='p-5 bg-white text-black hover:bg-gray-200' type="submit">Submit</Button>
                     </form>
                      </Form>
                 </div>
