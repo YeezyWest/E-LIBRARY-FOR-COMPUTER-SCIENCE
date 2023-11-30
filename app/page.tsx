@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <main>
       <MainNav />
-      <Banner />
+      {/* <Banner />
       <AboutUs />
       <WhatWeDo />
       <Donations />
       <Volunteer />
-      <Footer />
+      <Footer /> */}
     </main>
   )
 }

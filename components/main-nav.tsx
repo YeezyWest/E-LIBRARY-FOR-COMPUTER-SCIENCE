@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
+
+
 
 import { cn } from "@app/lib/utils"
 
@@ -15,6 +16,9 @@ import {
   navigationMenuTriggerStyle,
 } from "@app/components/ui/navigation-menu"
 import { Button } from "./ui/button"
+import Image from "next/image"
+import { Input } from "./ui/input"
+import Link from "next/link"
 
 const components: { title: string;  href: string; description: string;  }[] = [
   {
@@ -59,14 +63,14 @@ export function MainNav() {
     <>
     <div className="flex items-center space-x-72 justify-between p-4">
       <div>
-        <h1>Dream_Builders</h1>
+      <Image src="/img/LOGO copy.png" alt="logo" width={150} height={150} />
      </div>
 
      <div>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -98,7 +102,7 @@ export function MainNav() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <NavigationMenuTrigger>About us</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -113,34 +117,44 @@ export function MainNav() {
                 ))}
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
+          </NavigationMenuItem> */}
+          
+          {/* <NavigationMenuItem>
             <Link href="/what" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               What We Do
               </NavigationMenuLink>
             </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
+          </NavigationMenuItem> */}
+          {/* <NavigationMenuItem>
             <Link href="/media" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Media
               </NavigationMenuLink>
             </Link>
+          </NavigationMenuItem> */}
+          <NavigationMenuItem>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+             <Input className="w-full pr-48 " type="email" placeholder="Search by title,author " />
+           
+              </NavigationMenuLink>
+        
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/contact" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact
+              <h1>Login/Register</h1>
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
+          {/* <h1>
+          Login/Register
+          </h1> */}
         </NavigationMenuList>
       </NavigationMenu>
      </div>
-
       <div>
-          <Button className="p-5"> Donate</Button>
+          <Button className="p-5"> Cart</Button>
       </div>
   </div>
   </>
