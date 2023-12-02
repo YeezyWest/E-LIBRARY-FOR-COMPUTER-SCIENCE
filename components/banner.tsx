@@ -1,85 +1,71 @@
 'use client'
-import React, { useRef, useState } from 'react';
+import Image from 'next/image'
+import React from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/effect-cards';
+
 // import required modules
-import {Autoplay, EffectFade } from 'swiper/modules';
+import { EffectCards } from 'swiper/modules'
+import { Button } from './ui/button'
 
-import Link from "next/link";
-import { Button } from "./ui/button";
-
-
-
-const banners = [
+const catelogs = [
   {
     id: 1,
-    image: '/img/andre-hunter-AQ908FfdAMw-unsplash.jpg',
-    header:
-      'Inclusive care for children with special needs',
-    body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem sed aperiam necessitatibus veritatis ullam perspiciatis delectus alias, nam consectetur eos harum quasi sunt sint praesentium possimus? Magnam velit ullam commodi!`,
-   
+    image: '/img/1 1-2.png',
   },
   {
     id: 2,
-    image: '/img/scott-webb-O0T1SIgHAfM-unsplash.jpg',
-    header:
-      'Inclusive care for children with special needs',
-    body: `lorem`,
+    image: '/img/1 1.png',
+  },
+  {
+    id: 3,
+    image: '/img/2.png',
    
   },
 
 ];
 
-export function Banner() {
 
+export default function Banner() {
   return (
     <>
-      <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 300,
-              disableOnInteraction: false,
-            }}
-            navigation={false}
-            pagination={{
-              type: "bullets",
-              clickable: true,
-            }}
-            modules={[Autoplay, EffectFade]}
-            effect="fade"
-            className="mySwiper relative"
+     <div className='h-screen flex justify-center items-center space-x-20 bg-[#00453E]'>
+      <div className='space-y-10 text-white'>
+        <h3 className='capitalize italic'>Computer science book</h3>
+        <h1 className='font-bold w-[55%] text-4xl'>2-Weeks Plan to jump-start Your Reading</h1>
+        <p>Check out the new book by Dr. Martin to find out how to stay healthy and support your body.</p>
+         <Button className='bg-[#F1592B]'>Meet Our Bestsellers → </Button>
+      </div>
+      <div className='swiper-card '>
+          <Swiper
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
       >
-          {banners.map((item, index) => (
+        {catelogs.map((item, index) => (
              <SwiperSlide key={index}>
               <div
                 style={{
                   backgroundImage: `url(${item.image})`,
                 }}
-                className="bg-cover bg-center h-[100vh] md:h-[90vh] flex items-center justify-start "
+                className="bg-cover bg-center h-[100vh] md:h-[60vh] w-full flex items-center justify-start "
               >
-                 {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
-                <div className="text-center max-w-7xl mx-auto px-[1rem] md:px-[5rem] text-white">
-                  <h1 className="uppercase text-2xl md:text-4xl font-extrabold ">
-                    {item.header}
-                  </h1>
-                  <p className="my-4 text-sm md:text-lg">
-                    {item.body}
-                  </p>
-                  <Link className='cursor-pointer' href="/auth/login">
-                    <Button className="">
-                      Get Started
-                    </Button>
-                  </Link>
-                </div>
               </div>
               </SwiperSlide>
               
           ))}
-      </Swiper>
+         </Swiper>
+        </div>
+      {/* <div>
+      <Image src="/img/home-book-11.png" alt="logo" width={300} height={300} />
+      </div> */}
+
+     </div>
     </>
-  );
+  )
 }
