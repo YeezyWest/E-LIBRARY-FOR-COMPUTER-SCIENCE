@@ -4,19 +4,25 @@ import React from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-cards';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 
 // import required modules
-import { EffectCards } from 'swiper/modules';
-import { Button } from './ui/button'
+import { FreeMode, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+
+
 
 
 const catelogs = [
   {
     id: 1,
-    image: '/img/lucas-favre-MNXaW_ABlZY-unsplash.jpg',
+    image: '/img/home-book-11.png',
   },
   {
     id: 2,
@@ -33,50 +39,43 @@ const catelogs = [
 export default function AboutUs() {
   return (
     <>
-     <div className='flex justify-between items-center h-screen container gap-10'>
-        <div className='w-[40%] space-y-5'>
-        <h2 className='font-bold'>Know About us</h2>
-        <h1 className='font-semibold text-5xl'>We provide a place for student with special needs</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
-        <Button className='p-5 bg-[#F2C94C]' >Learn more </Button>
-        </div> 
-        <div className='swiper-card '>
-          <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        modules={[EffectCards]}
+     <div className='container gap-10 my-20'>
+      <h1 className='text-3xl font-semibold text-center'>Shop by Category</h1>
+     <div className='flex  items-center justify-center space-x-10 mt-5' >
+      <div className='bg-[#F0EBD5] py-4 px-5 rounded-xl'><Image className='rounded-md' src="/img/1 1-2.png" alt="logo" width={150} height={150} /></div>
+      <div className='bg-[#F0EBD5] py-4 px-5 rounded-xl'><Image className='rounded-md' src="/img/1 1.png" alt="logo" width={150} height={150} /></div>
+      <div className='bg-[#F0EBD5] py-4 px-5 rounded-xl'><Image className='rounded-md' src="/img/1.png" alt="logo" width={150} height={150} /></div>
+      <div className='bg-[#F0EBD5] py-4 px-5 rounded-xl'><Image className='rounded-md' src="/img/1 1-21.png" alt="logo" width={150} height={150} /></div>
+      <div className='bg-[#F0EBD5] py-4 px-5 rounded-xl'><Image className='rounded-md' src="/img/1 1-31.png" alt="logo" width={150} height={150} /></div>
+      <div className='bg-[#F0EBD5] py-4 px-5 rounded-xl'><Image className='rounded-md' src="/img/1 14.png" alt="logo" width={150} height={150} /></div>
+    
+        {/* <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        {catelogs.map((item, index) => (
-             <SwiperSlide key={index}>
-              <div
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                }}
-                className="bg-cover bg-center h-[100vh] md:h-[80vh] flex items-center justify-start "
-              >
-              </div>
-              </SwiperSlide>
+          {catelogs.map((image  , index) => (
+            <SwiperSlide key={index}>
               
-          ))}
-         </Swiper>
-        </div>
-     </div>
-     <div className='p-10'>
-      <div>
-       <h1 className='font-bold border-spacing-1'>OUR SUPPORTERS</h1>
-      </div>
-     <div className='border-[1px] border-gray-700'></div>
+            <div
+            style={{
+              backgroundImage: `url(${item.image})`,
+            }}
+            className="bg-cover bg-center h-[100vh] md:h-[80vh] flex items-center justify-start "
+            >
+            </div>
+            </SwiperSlide>
+            
+            ))}
 
-     <div className='flex item-center justify-between gap-10 my-5'>
-     <Image src="/img/Logo.png" alt="logo" width={150} height={150} />
-     <Image src="/img/Logo-2.png" alt="logo" width={150} height={150} />
-     <Image src="/img/Logo-3.png" alt="logo" width={150} height={150} />
-     <Image src="/img/Logo-4.png" alt="logo" width={150} height={150} />
-     <Image src="/img/Logo-5.png" alt="logo" width={150} height={150} />
-     <Image src="/img/Logo-6.png" alt="logo" width={150} height={150} />
-     </div>
-     </div>
+            </Swiper> */}
+          </div>
+          </div>
     </>
   )
 }

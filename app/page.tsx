@@ -5,7 +5,7 @@ import Donations from '@app/components/donations'
 import Footer from '@app/components/footer'
 import { MainNav } from '@app/components/main-nav'
 import Volunteer from '@app/components/volunteer'
-import WhatWeDo from '@app/components/what-we-do'
+import BestSelling from '@app/components/best-selling-book'
 
 
 
@@ -14,9 +14,9 @@ export default function Home() {
     <main>
       <MainNav />
       <Banner />
-      {/* <AboutUs />
-      <WhatWeDo />
-      <Donations />
+      <AboutUs />
+      <BestSelling />
+      {/* <Donations />
       <Volunteer />
       <Footer /> */}
     </main>

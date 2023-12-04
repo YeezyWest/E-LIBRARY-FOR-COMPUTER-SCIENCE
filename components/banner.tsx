@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import React from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,6 +22,16 @@ const catelogs = [
   },
   {
     id: 3,
+    image: '/img/2.png',
+   
+  },
+  {
+    id: 4,
+    image: '/img/2.png',
+   
+  },
+  {
+    id: 5,
     image: '/img/2.png',
    
   },
