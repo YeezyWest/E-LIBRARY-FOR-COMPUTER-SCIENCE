@@ -7,6 +7,11 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Form, FormControl, FormField, FormItem } from './ui/form'
 import { Button } from './ui/button'
+import Image from 'next/image'
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 
 // 2. Define a submit handler.
 function onSubmit(values: z.infer<typeof formSchema>) {
@@ -36,11 +41,11 @@ export default function Footer() {
     <div className='bg-black '>
         <div className='flex justify-between items-start p-10  container gap-10'>
                 <div className=''>
-                   <h1 className='text-white font-semibold'>Dream_Builders</h1>
+                <Image src="/img/LOGO copy.png" alt="logo" width={150} height={150} />
                 </div> 
-                <div className="">
+                <div className="flex flex-col space-y-3">
                     <h1 className='text-white font-semibold'>Home</h1>
-                    <ul className='text-gray-400'>
+                    <ul className='text-gray-400 space-y-3'>
                         <li>About us</li>
                         <li>Team</li>
                         <li>What we do</li>
@@ -48,9 +53,9 @@ export default function Footer() {
                     </ul>
              
                 </div>
-                <div className="">
+                <div className="flex flex-col space-y-3">
                     <h1 className='text-white font-semibold'>More</h1>
-                    <ul className='text-gray-400'>
+                    <ul className='text-gray-400 space-y-3'>
                         <li>Projects</li>
                         <li>Events</li>
                         <li>Donate</li>
@@ -58,13 +63,13 @@ export default function Footer() {
                     </ul>
              
                 </div>
-                <div className="">
+                <div className="flex flex-col items-center space-y-3">
                     <h1 className='text-white font-semibold'>Connect </h1>
-                    <ul className='text-gray-400'>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>Twitter</li>
-                        <li>Linkdin </li>
+                    <ul className='text-gray-400 space-y-3'>
+                        <li className='text-2xl'><FaFacebook /></li>
+                        <li className='text-2xl'><FaInstagram /></li>
+                        <li className='text-2xl'><FaTwitter /></li>
+                        <li className='2xl'><FaLinkedin /></li>
                     </ul>
              
                 </div>
