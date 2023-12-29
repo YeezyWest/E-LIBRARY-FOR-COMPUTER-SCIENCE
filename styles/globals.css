@@ -128,3 +128,19 @@
 .swiper-slide:nth-child(10n) {
   background-color: rgb(54, 94, 77);
 }
+
+.cl-footerActionLink {
+  font-size: 14px;
+  text-transform: none;
+  color: black;
+}
+.cl-footerActionLink:hover,
+.cl-footerActionLink:focus,
+.cl-footerActionLink:active {
+  color: black;
+}
+
+.cl-internal-b3fm6y{
+  background-color: black;
+  display: none;
+}

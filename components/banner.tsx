@@ -8,30 +8,20 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 
 // import required modules
-import { EffectCards } from 'swiper/modules'
+import {Autoplay, EffectCards } from 'swiper/modules'
 import { Button } from './ui/button'
 
 const catelogs = [
   {
     id: 1,
-    image: '/img/1 1-2.png',
+    image: '/img/sincerely-media-CXYPfveiuis-unsplash.jpg',
   },
   {
     id: 2,
-    image: '/img/1 1.png',
+    image: '/img/fantasy-1077863_1280.jpg',
   },
   {
     id: 3,
-    image: '/img/2.png',
-   
-  },
-  {
-    id: 4,
-    image: '/img/2.png',
-   
-  },
-  {
-    id: 5,
     image: '/img/2.png',
    
   },
@@ -53,7 +43,11 @@ export default function Banner() {
           <Swiper
         effect={'cards'}
         grabCursor={true}
-        modules={[EffectCards]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, EffectCards]}
         className="mySwiper"
       >
         {catelogs.map((item, index) => (
