@@ -32,7 +32,7 @@ const catelogs = [
 export default function Banner() {
   return (
     <>
-     <div className='h-screen flex justify-center items-center space-x-20 bg-[#00453E]'>
+     <div className='h-screen flex justify-center items-center space-x-20 bg-gradient-to-l from-green-300 to-[#00453E]'>
       <div className='space-y-10 text-white'>
         <h3 className='capitalize italic'>Computer science book</h3>
         <h1 className='font-bold w-[55%] text-4xl'>2-Weeks Plan to jump-start Your Reading</h1>
