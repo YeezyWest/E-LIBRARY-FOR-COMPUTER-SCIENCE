@@ -5,16 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiAlignJustify, FiSearch } from "react-icons/fi";
 import { BsArrowBarUp } from "react-icons/bs";
-import { RiMoonFill, RiSunFill } from "react-icons/ri";
-import {
-  IoMdNotificationsOutline,
-  IoMdInformationCircleOutline,
-} from "react-icons/io";
+import { IoMdNotificationsOutline } from "react-icons/io";
 import { useSidebarContext } from "@app/providers/sidebar-provider";
 import routes from "@app/data/routes";
 import { useThemeContext } from "@app/providers/theme-providers";
 import Dropdown from "../dropdown";
-
 
 type Props = {};
 
@@ -144,44 +139,6 @@ const Navbar = ({}: Props) => {
           </div>
         </Dropdown>
 
-        {/* start Horizon PRO */}
-        <Dropdown
-          button={
-            <p className="cursor-pointer">
-              <IoMdInformationCircleOutline className="h-4 w-4 text-gray-600 dark:text-white" />
-            </p>
-          }
-          className={"py-2 top-6 -left-[250px] md:-left-[330px] w-max"}
-          animation="origin-[75%_0%] md:origin-top-right transition-all duration-300 ease-in-out"
-        >
-          <div className="flex w-[350px] flex-col gap-2 rounded-[20px] bg-white p-4 shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
-            <div className="mb-2 aspect-video w-full rounded-lg bg-cover h-[35vh] bg-no-repeat bg-[url('/img/yusuf.jpg')]" />
-            <span className="px-full linear flex cursor-pointer items-center justify-center rounded-xl border py-[11px] font-bold text-navy-700 transition duration-200 hover:bg-gray-200 hover:text-navy-700 dark:!border-white/10 dark:text-white dark:hover:bg-white/20 dark:hover:text-white dark:active:bg-white/10">
-              A Coffee chat with Me
-            </span>
-            <Link
-              target="blank"
-              href="https://github.com/YeezyWest"
-              className="px-full linear flex cursor-pointer items-center justify-center rounded-xl border py-[11px] font-bold text-navy-700 transition duration-200 hover:bg-gray-200 hover:text-navy-700 dark:!border-white/10 dark:text-white dark:hover:bg-white/20 dark:hover:text-white dark:active:bg-white/10"
-            >
-              Github
-            </Link>
-          </div>
-        </Dropdown>
-
-        {/* DARK MODE */}
-        <div
-          className="cursor-pointer text-gray-600"
-          onClick={() => {
-            theme === "dark" ? setTheme("light") : setTheme("dark");
-          }}
-        >
-          {theme === "dark" ? (
-            <RiSunFill className="h-4 w-4 text-gray-600 dark:text-white" />
-          ) : (
-            <RiMoonFill className="h-4 w-4 text-gray-600 dark:text-white" />
-          )}
-        </div>
         <UserButton afterSignOutUrl="/" />
       </div>
     </nav>

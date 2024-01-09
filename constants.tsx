@@ -21,17 +21,17 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   // },
   {
     title: 'Material Handout',
-    path: '/material-handout',
+    path: '/',
     icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
   },
   {
-    title: 'Past Q',
-    path: '/past-q',
+    title: '',
+    path: '/',
     icon: <Icon icon="lucide:mail" width="24" height="24" />,
   },
   {
-    title: 'Programming Languages',
-    path: '/programming languages',
+    title: '',
+    path: '/',
     icon: <Icon icon="lucide:mail" width="24" height="24" />,
   },
 

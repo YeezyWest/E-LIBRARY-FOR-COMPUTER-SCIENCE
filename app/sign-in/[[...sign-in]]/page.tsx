@@ -18,9 +18,7 @@ export default function SignInPage() {
               </Link>
             </div>
             <div className="absolute bottom-20 left-0 right-0 m-auto sm:w-[30em]">
-              <p className="sm:text-xm md:text-xm lg:text-md font-bold text-white">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quo amet harum sint, eaque, vero voluptas dicta soluta possimus minus sit laudantium, ea quibusdam optio pariatur vel voluptate rerum dignissimos?z
-              </p>
+             
             </div>
           </div>
         

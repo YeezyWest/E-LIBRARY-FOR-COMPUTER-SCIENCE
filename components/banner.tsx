@@ -22,7 +22,7 @@ const catelogs = [
   },
   {
     id: 3,
-    image: '/img/2.png',
+    image: '/img/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg',
    
   },
 
@@ -37,7 +37,7 @@ export default function Banner() {
         <h3 className='capitalize italic'>Computer science book</h3>
         <h1 className='font-bold w-[55%] text-4xl'>2-Weeks Plan to jump-start Your Reading</h1>
         <p>Check out the new book by Dr. Martin to find out how to stay healthy and support your body.</p>
-         <Button className='bg-[#F1592B]'>Meet Our Bestsellers → </Button>
+         <Button className='bg-[#F1592B] hover:bg-orange-5200'>Meet Our Bestsellers → </Button>
       </div>
       <div className='swiper-card '>
           <Swiper

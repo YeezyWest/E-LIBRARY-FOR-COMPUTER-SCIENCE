@@ -144,3 +144,6 @@
   background-color: black;
   display: none;
 }
+.cl-userButtonPopoverFooter {
+  display: none;
+}

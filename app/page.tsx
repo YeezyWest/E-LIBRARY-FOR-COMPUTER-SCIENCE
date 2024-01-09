@@ -1,4 +1,4 @@
-import AboutUs from '@app/components/about-us'
+import Category from '@app/components/category'
 import Banner from '@app/components/banner'
 import Footer from '@app/components/footer'
 import { MainNav } from '@app/components/main-nav'
@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <MainNav />
       <Banner />
-      <AboutUs />
+      <Category />
       <BestSelling />
       <Footer />
     </main>

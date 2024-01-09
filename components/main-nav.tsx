@@ -27,7 +27,7 @@ export function MainNav() {
             </>
           )}
           {userId && (
-            <Link href="dashboard" className=" mr-4">
+            <Link href="dashboard" className=" mr-4 px-6 py-2 bg-black text-white rounded-md">
               Dashboard
             </Link>
           )}

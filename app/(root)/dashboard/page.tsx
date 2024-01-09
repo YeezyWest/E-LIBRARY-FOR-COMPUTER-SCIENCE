@@ -1,32 +1,20 @@
-"use client";
-import { useUser } from "@clerk/nextjs";
+import Banner1 from "./components/banner";
+import DailyTraffic from "./components/daily-traffic";
+import PieChartCard from "./components/pie-chart-card";
 
-export default function page() {
-  const { isLoaded, isSignedIn, user } = useUser();
-  if (!isLoaded || !isSignedIn) {
-    return null;
-  }
- 
+
+
+
+const page = () => {
   return (
-    <section>
-      <span className="font-bold text-4xl">
-        Wagwan 🤜🤛 {user.firstName}, Welcome to Dream Builders
-      </span>
-      <div className="border-dashed border border-zinc-500 w-full h-12 rounded-lg"></div>
-      <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg">
-        {/* <Link href={{
-          pathname: '/help', 
-          query: {
-            name: 
-          }
-        }} >
-        
-        </Link> */}
+    <div className="mt-3 grid h-full grid-cols-1 gap-5">
+      <div className="col-span-1 h-fit w-full xl:col-span-1 2xl:col-span-2">
+        <Banner1 />
+        <DailyTraffic />
+        <PieChartCard />
       </div>
-      <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div>
-      <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div>
-      <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div>
-      <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div>
-    </section>
+    </div>
   );
-}
+};
+
+export default page;
