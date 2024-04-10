@@ -7,9 +7,9 @@ export function MainNav() {
   return (
     <>
       <nav className="flex items-center justify-between py-1 px-6">
-        <div className="flex items-center px-4 py-4">
+        <div className="flex items-center md:px-4 py-4">
           <Link href='/'>
-          <Image src="/img/LOGO copy.png" alt="logo" width={150} height={150} />
+          <Image src="/img/LOGO copy.png" alt="logo" width={100} height={100} />
         </Link>
         </div>
         <div className="flex items-center">
@@ -31,7 +31,7 @@ export function MainNav() {
               Dashboard
             </Link>
           )}
-          <div className="ml-auto">
+          <div className="hidden md:block md:ml-auto">
             <UserButton afterSignOutUrl="/" />
           </div>
         </div>

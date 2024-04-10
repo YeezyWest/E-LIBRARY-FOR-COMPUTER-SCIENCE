@@ -1,9 +1,9 @@
-import Category from '@app/components/category'
+// import Category from '@app/components/category'
 import Banner from '@app/components/banner'
-import Footer from '@app/components/footer'
+// import Footer from '@app/components/footer'
 import { MainNav } from '@app/components/main-nav'
 
-import BestSelling from '@app/components/best-selling-book'
+// import BestSelling from '@app/components/best-selling-book'
 
 
 
@@ -12,9 +12,9 @@ export default function Home() {
     <main>
       <MainNav />
       <Banner />
-      <Category />
-      <BestSelling />
-      <Footer />
+      {/* <Category /> */}
+      {/* <BestSelling />
+      <Footer /> */}
     </main>
   )
 }

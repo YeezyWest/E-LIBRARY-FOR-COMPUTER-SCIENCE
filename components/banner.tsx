@@ -32,10 +32,10 @@ const catelogs = [
 export default function Banner() {
   return (
     <>
-     <div className='h-screen flex justify-center items-center space-x-20 bg-gradient-to-l from-green-300 to-[#00453E]'>
-      <div className='space-y-10 text-white'>
-        <h3 className='capitalize italic'>Computer science book</h3>
-        <h1 className='font-bold w-[55%] text-4xl'>2-Weeks Plan to jump-start Your Reading</h1>
+     <div className='h-screen md:flex justify-center items-center space-x-20 bg-gradient-to-l from-green-300 to-[#00453E]'>
+      <div className='space-y-10  justify-center px-4 pt-10 text-white'>
+        <h3 className='capitalize italic'>books</h3>
+        <h1 className='font-bold md:w-[55%] text-4xl'>2-Weeks Plan to jump-start Your Reading</h1>
         <p>Check out the new book by Dr. Martin to find out how to stay healthy and support your body.</p>
          <Button className='bg-[#F1592B] hover:bg-orange-5200'>Meet Our Bestsellers → </Button>
       </div>
@@ -56,7 +56,7 @@ export default function Banner() {
                 style={{
                   backgroundImage: `url(${item.image})`,
                 }}
-                className="bg-cover bg-center h-[100vh] md:h-[60vh] w-full flex items-center justify-start "
+                className="bg-cover bg-center h-[100vh] md:h-[60vh] w-full hidden md:flex items-center justify-start "
               >
               </div>
               </SwiperSlide>
